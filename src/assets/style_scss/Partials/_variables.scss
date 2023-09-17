@@ -1,0 +1,30 @@
+
+// $theme : dark ;
+
+$background: transparent;
+$background_def: #283046;
+$background_main: #535353;
+
+// @if $theme == light{
+//     $background: transparent;
+// $background_def: #ccd0dc;
+// $background_main: #5d5858;}
+
+[data-theme="dark"] {
+    
+    --background_main: #535353;
+    --background_def:#283046;
+    --color_text : #ffff;
+    --button_hover:linear-gradient(100deg,#4d4b60,#fdfdff );
+    --border :#535353e7;
+    }
+     [data-theme="light"] {
+        
+        --background_main: #ffffff;
+        --background_def:#c8c9cb;
+        --color_text : #000000;
+        --button_hover:linear-gradient(100deg,#fdfdff,#7367f0 );
+        --border: #fffafac4 ;
+
+
+      }

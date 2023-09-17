@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bbce1488-6e9a-4fc8-ab2d-2dfb49b99b73" name="Changes" comment="test" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php" />
+  <component name="ProjectId" id="2Mj5oQfUxve9BDnNKng9u2FJHfI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/var/www/html/Vue-template&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/var/www/html/dashbord_vue_master/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/phpstorm/324/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/views/ecommerce" />
+      <recent name="$PROJECT_DIR$/src/components/card/ecomerce" />
+      <recent name="$PROJECT_DIR$/src/views" />
+      <recent name="$PROJECT_DIR$/src/views/dashboard" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bbce1488-6e9a-4fc8-ab2d-2dfb49b99b73" name="Changes" comment="" />
+      <created>1678268326953</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678268326953</updated>
+      <workItem from="1678268328738" duration="18000" />
+      <workItem from="1678268361898" duration="8610000" />
+      <workItem from="1678348253456" duration="4931000" />
+      <workItem from="1678361459552" duration="9845000" />
+      <workItem from="1678618440249" duration="33373000" />
+      <workItem from="1678785345814" duration="834000" />
+      <workItem from="1678786413054" duration="1413000" />
+      <workItem from="1678791486385" duration="15267000" />
+      <workItem from="1678872311967" duration="14296000" />
+      <workItem from="1678962249098" duration="10492000" />
+      <workItem from="1679470433623" duration="3513000" />
+      <workItem from="1679821299298" duration="1269000" />
+      <workItem from="1680686127213" duration="8878000" />
+      <workItem from="1680764012974" duration="8879000" />
+      <workItem from="1680773439438" duration="3779000" />
+      <workItem from="1681030229205" duration="5742000" />
+      <workItem from="1681041498191" duration="4202000" />
+      <workItem from="1681109641787" duration="7876000" />
+      <workItem from="1681119042681" duration="16214000" />
+      <workItem from="1681290191705" duration="5685000" />
+      <workItem from="1681308793631" duration="8390000" />
+      <workItem from="1681379313094" duration="1987000" />
+      <workItem from="1681384288314" duration="4319000" />
+      <workItem from="1681470285594" duration="10848000" />
+      <workItem from="1681481943789" duration="43290000" />
+      <workItem from="1681806122976" duration="638000" />
+      <workItem from="1681806769647" duration="1644000" />
+      <workItem from="1681808504134" duration="22000" />
+      <workItem from="1681809594666" duration="19000" />
+      <workItem from="1681892105072" duration="20000" />
+      <workItem from="1681892136544" duration="3000" />
+    </task>
+    <task id="LOCAL-00001" summary="first one">
+      <created>1679818282913</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679818282913</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test">
+      <created>1679819434122</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679819434122</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first add" />
+    <MESSAGE value="first one" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+</project>

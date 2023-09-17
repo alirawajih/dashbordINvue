@@ -1,0 +1,39 @@
+@import '../Partials/variables';
+@import '../Partials/mixin';
+
+.states {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.maindiv {
+    @include card
+}
+
+.textgray {
+    color: gray;
+}
+h5{
+    color: var(--color_text);
+}
+
+.menu {
+    inset: 50px 30% 20px 5px;
+}
+
+.featherdiv {
+    background: rgb(31, 31, 31);
+    color: rgb(251, 251, 255);
+    height: 40px;
+    width: 39px;
+    border-radius: 10px;
+}
+
+span {
+    padding-right: 5px;
+    font-weight: bold;
+}
+.dropdownbutton{
+    cursor: pointer;
+}

@@ -1,0 +1,42 @@
+@import '../Partials/variables';
+@import '../Partials/mixin';
+
+.meetup {
+  @include card
+}
+
+
+.textgray {
+  color: gray;
+}
+
+img {
+  background: #293f7a84;
+  text-align: center;
+  height: 170px;
+  width: 100%;
+}
+
+.date {
+  border-right: solid 1px rgba(160, 158, 158, 0.451);
+  padding: 10px;
+  text-align: center;
+}
+
+.feathercategory {
+  background: rgb(34, 33, 33);
+  color: #f08b67;
+  height: 40px;
+  width: 39px;
+  border-radius: 5px;
+
+
+}
+
+.textsize {
+  font-size: 10px;
+}
+
+.textgray {
+  color: gray;
+}

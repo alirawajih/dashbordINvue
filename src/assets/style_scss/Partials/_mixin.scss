@@ -1,0 +1,17 @@
+@import 'variables';
+@mixin border() {
+
+    border-radius: 5px;
+    border: 1px solid transparent;
+  }
+  @mixin font(){
+    font-size: 10px;
+    color: var(--color_text);
+  }
+  @mixin card(){
+    position: relative;
+    border-radius: 5px;
+    background: var(--background_def);
+    height: 100%;
+    
+  }

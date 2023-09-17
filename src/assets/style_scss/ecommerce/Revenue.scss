@@ -1,0 +1,31 @@
+@import '../Partials/variables';
+@import '../Partials/mixin';
+.revenue {
+  @include card;
+
+ 
+  }
+  
+  .rightdiv {
+    border-left: 1px grey solid;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+
+  .textgray {
+    color: var(--color_text);
+  }
+  .dropmenu {
+    background: var(--background_def);
+  }
+  a {
+    color: var(--color_text);
+  }
+  a:hover {
+    background: #1e205bd9;
+    color: white;
+  }
+  .dropbtn {
+    background: var(--background_def);
+  }

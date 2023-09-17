@@ -1,0 +1,17 @@
+ {
+    "users": [
+        {
+            "email": "ali@yahoo.com",
+            "password": "222",
+            "position": "admin",
+            "ability": [
+                {
+                  "action": "manage",
+                  "subject": "all"
+                }
+              ]
+              
+        }
+        
+      ]
+}

@@ -1,0 +1,34 @@
+@import '../Partials/variables';
+@import '../Partials/mixin';
+.states {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .maindiv {
+    @include card
+
+  }
+  h5 ,span{
+    color: var(--color_text);
+  }
+  
+  .textgray {
+    color: gray;
+  }
+  
+  .featherdiv {
+    background: white;
+    color: blue;
+    height: 40px;
+    width: 39px;
+    border-radius: 10px;
+  }
+  .chart{
+      border-bottom:solid 1px white;
+  
+  }
+  .datacompleted{
+      border-right:solid 1px white;
+  
+  }

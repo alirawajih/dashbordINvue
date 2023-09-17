@@ -1,0 +1,51 @@
+@import '../Partials/variables';
+@import '../Partials/mixin';
+
+.companyTable {
+  @include card
+}
+
+.headertable {
+  background: var(--background_def);
+  border: none;
+}
+
+.featherdiv {
+  background: var(--background_def);
+  color: var(--color_text);
+  height: 40px;
+  width: 39px;
+  border-radius: 10px
+}
+
+.feathercategory {
+  background: white;
+  color: #7367f0;
+  height: 40px;
+  width: 39px;
+  border-radius: 19px;
+
+
+}
+
+.textgray {
+  color: gray;
+}
+
+.textsize {
+  @include font
+}
+
+table th {
+  padding: 13px;
+}
+
+table tr {
+  background: var(--background_def);
+  color: var(--color_text);
+}
+
+.headertable th {
+  color: var(--color_text);
+
+}

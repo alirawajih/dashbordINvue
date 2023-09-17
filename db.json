@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "ali@yahoo.com",
+      "password": "123",
+      "position": "admin",
+      "ability": [
+        {
+          "action": "manage",
+          "subject": "all"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "email": "ali1@yahoo.com",
+      "password": "1234",
+      "position": "user",
+      "ability": [
+        {
+          "action": "read",
+          "subject": "ACL"
+        }
+      ]
+    }
+  ]
+}

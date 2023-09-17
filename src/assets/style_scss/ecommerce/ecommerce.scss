@@ -1,0 +1,27 @@
+
+@import '../Partials/variables';
+@import '../Partials/mixin';
+a {
+    text-decoration: none;
+    color: #7367f0;
+  }
+  .congratulation {
+   @include card;
+   
+  }
+  button {
+    background: #7367f0;
+   @include border
+  }
+  
+  .textgray {
+    color: gray;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    right: 34px;
+  }
+  h5{
+    color: var(--color_text);
+  }

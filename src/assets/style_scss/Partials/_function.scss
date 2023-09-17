@@ -1,0 +1,6 @@
+@function dynamic-height($height, $padding) {
+    @return $height + $padding;
+  }
+  @function width($height, $padding) {
+    @return $height + $padding;
+  }

@@ -1,0 +1,32 @@
+@import '../Partials/variables';
+@import '../Partials/mixin';
+.chat {
+    position: relative;
+    border-radius: 5px;
+    background: var(--background_def);
+    color: var(--color_text)
+  }
+  .messages {
+@include border;
+    background: gray;
+    height: 700px;
+    overflow-y: scroll;
+    padding: 7px;
+  }
+  .message {
+    border: solid 1px gray;
+    border-radius: 7px;
+    background: var(--background_def);
+    display: table-caption;
+  
+    padding: 5px;
+    height: auto;
+  }
+  form {
+    display: flex;
+    width: inherit;
+  }
+  form input {
+    background: rgba(128, 128, 128, 0.444);
+    border: none;
+  }

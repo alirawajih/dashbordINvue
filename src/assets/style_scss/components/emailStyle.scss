@@ -1,0 +1,95 @@
+@import '../Partials/variables';
+@import '../Partials/mixin';
+
+
+.email {
+    @include border;
+    @include font;
+    background: $background;
+
+
+}
+
+.listemail {
+    border-radius: 5px;
+    background: var(--background_def);
+}
+
+.Searchpar {
+    background-color: $background;
+    border: 0px;
+    color: #ffffff;
+}
+
+.Searchpar:focus {
+    background-color: $background;
+    color: #ffffff;
+}
+
+.bordar {
+    border-bottom: 1px solid grey;
+}
+
+.checkbox {
+    background: $background;
+    border: 1px solid rgb(103, 99, 99);
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+p {
+    color: gray;
+}
+
+li:hover {
+    background: gray;
+    border: 1px solid gray;
+    cursor: pointer;
+
+    p {
+        color: rgba(0, 0, 0, 0.487);
+    }
+
+    .checkbox {
+        border: 1px solid black;
+    }
+}
+
+.showEmail-open {
+    animation: animateopen 0.9s;
+    display: block;
+
+    position: absolute;
+    height: 927px;
+    z-index: 2;
+}
+
+.showEmail-close {
+
+    display: none;
+
+}
+
+@keyframes animateopen {
+    0% {
+        right: -400px;
+        opacity: 1;
+    }
+
+    100% {
+        right: 400px;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    @keyframes animateopen {
+      
+    
+    }
+  }

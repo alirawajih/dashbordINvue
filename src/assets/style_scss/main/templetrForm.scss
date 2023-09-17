@@ -1,0 +1,159 @@
+@import '../Partials/variables';
+  
+
+
+.dashbord {
+    width: 100%;
+    min-height: 100%;
+   position:absolute;
+    background: var(--background_main);
+    padding-bottom: 15px;
+    
+}
+
+.components {
+    padding-top: 77px;
+    padding-left: 225px;
+}
+
+.components-big {
+    padding-top: 77px;
+    padding-left: 68px;
+}
+
+.navBarUp {
+
+    position: fixed;
+    top: 0px;
+    left: 233px;
+    width: calc(100% - 241px);
+    z-index: 2;
+    background: var(--border);;
+    border-bottom-left-radius:7px ;
+    border-bottom-right-radius:7px ;
+
+    padding-top:11px ;
+}
+
+.navBarUp-big {
+
+    position: fixed;
+    top: 0px;
+    left: 74px;
+    width: calc(100% - 82px);
+    z-index: 2;
+    background: var(--border);
+    border-bottom-left-radius:7px ;
+    border-bottom-right-radius:7px ;
+
+    padding-top:11px ;
+}
+
+
+.navright {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    display: none;
+    z-index: 3;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 13%;
+    height: 100%;
+}
+
+.navbar-min {
+    position: fixed;
+    top: 0px;
+    left: 14%;
+    width: 84%;
+
+
+}
+
+.navbar-big {
+    position: fixed;
+    top: 0px;
+    left: 4%;
+    width: 94%;
+
+}
+
+
+
+.route-enter-from {
+    opacity: 0;
+    transform: translatex(100px);
+
+}
+
+.route-enter-active {
+    transition: all 0.3s ease-out;
+}
+
+.route-leave-to {
+    opacity: 0;
+    transform: translatey(-100px);
+
+}
+
+.route-leave-active {
+    transition: all 0.3s ease-in;
+}
+.close{
+    display: none;
+}
+.open{
+    display: inline-block;
+}
+@media screen and (max-width: 1595px) and (min-width: 1960px) {
+    .navbar-min {
+        position: fixed;
+        top: 0px;
+        left: 14%;
+        width: 84%;
+
+
+    }
+
+    .navbar-big {
+        position: fixed;
+        top: 15px;
+        left: 4%;
+        width: 94%;
+
+    }
+}
+
+@media screen and (max-width: 1560px) {
+    .navmenu {
+        display: none;
+    }
+
+
+    .navBarUp,
+    .navBarUp-big {
+
+        position: fixed;
+        top: 0px;
+        left: 8px;
+        width: calc(100% - 16px);
+        z-index: 2;
+    }
+
+    // .navright {
+    //     display: inline-block
+    // }
+
+    .components,
+    .components-big {
+        padding-left: 0px;
+    }
+
+}
