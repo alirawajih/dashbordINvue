@@ -130,6 +130,7 @@ const routes = [
         },
         props: true 
     },
+    
     {
         path: '/homePage',
         name: 'homePage',

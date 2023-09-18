@@ -63,6 +63,7 @@ const store = createStore({
             },
 
         ],
+        dashbordname:['DashbordOne','DashbordTow'],
         
         loginMessage: '',
         auth: false,

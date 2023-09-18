@@ -1,21 +1,22 @@
 <template>
-  <div class="loginpage row m-0 p-5">
-    <div class="col-xl-9 col-md-12 col-sm-12 d-flex justify-content-center">
-      <div class="d-inline-block m-0 p-0">
+  <div class="homebutton">
         <router-link :to="{ name: 'homePage' }">
           <vue-feather type="home"></vue-feather>
         </router-link>
         
-          <vue-feather type="home" @click="click()"></vue-feather>
         
       </div>
+  <div class="loginpage row m-0 " v-if="dash">
+    
+    <div class="col-xl-9 col-md-12 col-sm-12 d-flex justify-content-center p-5">
+      
       <img
         src="../../../src/assets/images/pages/not-authorized-dark.svg"
         class="img-fluid"
         alt="..."
       />
     </div>
-    <div class="col-xl-3 col-md-12 col-sm-12 login">
+    <div class="col-xl-3 col-md-12 col-sm-12 login p-5">
       <main class="LoginForm">
         <form @submit.prevent="onSubmit">
           <div class="alert alert-danger" role="alert" v-if="message">
@@ -59,13 +60,18 @@
       </main>
     </div>
   </div>
+  <div class="pt-5"  v-else>
+    <notfound/>
+  </div>
 </template>
 <script>
 import { ability } from "@/ability/defineApilty";
 import router from "@/router";
+import store from "../../store";
 import { login } from "@/jsc/loginuser";
 import { Store } from "vuex";
 import * as yup from "yup";
+import notfound from "../../components/notfound/notfound.vue";
 import { Form, Field, ErrorMessage, useField, useForm } from "vee-validate";
 export default {
   name: "login",
@@ -73,9 +79,10 @@ export default {
   components: {
     Field,
     Form,
-    ErrorMessage,
+    ErrorMessage,notfound
   },
   data() {
+    let dash = true;
     const { handleSubmit } = useForm();
 
     const onSubmit = handleSubmit((values) => {
@@ -112,9 +119,14 @@ export default {
       erroremail,
       handleSubmit,
       onSubmit,
+      dash
     };
   },
-  created() {},
+  created() {
+    if(!store.state.dashbordname.filter(i => i== this.name).length){
+      this.dash = false
+    }
+  },
   methods: {
     async submit() {
       // console.log(handleSubmit)
@@ -167,6 +179,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #c2bebe;
 }
 .LoginForm {
   margin-left: 7%;
@@ -182,8 +195,14 @@ export default {
 .loginpage {
   /* background: rgba(128, 128, 128, 0.484); */
   min-height: 100vh;
+  
 }
 a {
   color: black;
+}
+.homebutton{
+  position: absolute;
+  display: inline-block;
+  padding: 30px;
 }
 </style>
