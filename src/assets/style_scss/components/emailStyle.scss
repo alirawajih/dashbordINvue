@@ -6,10 +6,21 @@
     @include border;
     @include font;
     background: $background;
-
-
 }
-
+.Unread{
+    background: var(--Unread);
+}
+.menu{
+    border-radius: 0px;
+}
+.menu li:hover{
+    background: rgb(222, 221, 221);
+    border: none;
+    
+}
+.menu li{
+    padding: 3px;
+    border: none;}
 .listemail {
     border-radius: 5px;
     background: var(--background_def);

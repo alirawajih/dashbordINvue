@@ -1,9 +1,9 @@
 import { createStore } from "vuex";
-// import { router } from '../router/index'
-// import defineApilty from '@/ability/ability'
+// import { router } from '../router/index';
+// import defineApilty from '@/ability/ability';
 import {Settimeout} from "@/jsc/timeout";
-import { ability } from "@/ability/defineApilty";
-import {initialAbility} from '@/ability/config'
+import {ability} from "@/ability/defineApilty";
+import {initialAbility} from '@/ability/config';
 import dashbordone from "./dashbordone";
 
 

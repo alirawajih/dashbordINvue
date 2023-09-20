@@ -46,6 +46,7 @@
               </div>
             </div>
             <input
+              @input="search"
               data-v-10417946=""
               type="text"
               placeholder="Search email"
@@ -65,28 +66,38 @@
               type="checkbox"
               class="form-check-input checkbox"
               id="exampleCheck1"
+              v-model="checked"
+              @click="checked ? (selected = []) : selectall()"
             />
+
             <label class="form-check-label text-secondary" for="exampleCheck1"
-              >Select All</label
-            >
+              >Select All
+            </label>
+          </div>
+          <div class="form-check fs-6 ms-3" v-if="selected.length">
+            <div class="groupmenu">
+              <vue-feather
+                type="more-vertical"
+                class="dropdownbutton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              ></vue-feather>
+              <ul class="dropdown-menu menu">
+                <li @click="readall()">set all as read</li>
+                <li @click="unreadall()">set all as un read</li>
+                <li @click="deletemail()">delet all</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div class="m-0" style="overflow-y: scroll; height: 83em">
-        <ul
-          v-for="email in emails"
-          :key="email.id"
-          class="email-slist"
-        >
-          <li class="emails">
+        <ul v-for="email in emails" :key="email.id" class="email-slist">
+          <li :class="`emails ${email.isRead || 'Unread'}`">
             <div class="d-flex ps-3">
-              <div   >
+              <div>
                 <div class="p-2">
-                  <label
-                    for="toggler "
-                    style="cursor: pointer"
-                   
-                  >
+                  <label for="toggler " style="cursor: pointer">
                     <b-avatar class="p-0" :src="email.from.avatar"></b-avatar>
                   </label>
                 </div>
@@ -95,12 +106,15 @@
                     <input
                       type="checkbox"
                       class="form-check-input checkbox"
-                      id="exampleCheck1"
+                      :id="`email${email.id}`"
+                      v-model="selected"
+                      :value="email.id"
+                      :checked="this.selected.includes(email.id)"
                     />
                   </div>
                 </div>
               </div>
-              <div class="pt-2 d-flex"  @click="showEmaildata(email)">
+              <div class="pt-2 d-flex" @click="showEmaildata(email, true)">
                 <div class="flex-item">
                   <h6 class="text-white-60">
                     {{ email.from.name }}
@@ -108,7 +122,7 @@
                   <h6 class="text-truncate">
                     {{ email.subject }}
                   </h6>
-                  <p class=" fs-6">
+                  <p class="fs-6">
                     {{ subject(email.message) }}
                   </p>
                 </div>
@@ -130,6 +144,8 @@ export default {
       emails: [],
       openEmail: false,
       emailData: null,
+      selected: [],
+      checked: false,
     };
   },
   created() {
@@ -142,11 +158,73 @@ export default {
     },
     showEmaildata(data) {
       this.openEmail = true;
-      this.emailData = data
+      this.emailData = data;
+      this.emails.map((i) => {
+        if (i.id == data.id) {
+          return (i.isRead =  false);
+        }
+      });
     },
-    close(){
+    close() {
       this.openEmail = false;
-    }
+    },
+    search(event) {
+      let text = event.target.value;
+      let newArr = this.emails;
+      if (text.length >= 3) {
+        newArr = emails.emails.filter((i) => {
+          let ssss = text.toLocaleLowerCase();
+
+          return (
+            i.subject.toLocaleLowerCase().startsWith(ssss) ||
+            i.from.name.toLocaleLowerCase().startsWith(ssss)
+          );
+        });
+      }
+
+      if (text == "") {
+        newArr = emails.emails;
+      }
+
+      this.emails = newArr;
+    },
+    // select(id = null) {
+    //   console.log(this.selected)
+    //   // console.log(this.selected)
+    //   // if (id) {
+    //   //   if (!this.selected.includes(id)) {
+    //   //     this.selected.push(id);
+    //   //   }
+    //   // } else {
+    //   //   this.selected = this.emails.map((i) => i.id);
+    //   // }
+    // },
+    selectall() {
+      this.selected = this.emails.map((i) => i.id);
+    },
+    deletemail() {
+      this.emails = this.emails.filter((y) => !this.selected.includes(y.id));
+      this.checked = false;
+      this.selected = [];
+    },
+    readall() {
+      this.emails.map((i) => {
+        if (this.selected.includes(i.id)) {
+          i.isRead = true;
+        }
+      });
+      this.checked = false;
+      this.selected = [];
+    },
+    unreadall() {
+      this.emails.map((i) => {
+        if (this.selected.includes(i.id)) {
+          i.isRead = false;
+        }
+      });
+      this.checked = false;
+      this.selected = [];
+    },
   },
 };
 </script>

@@ -61,6 +61,7 @@ export default {
           time: new Date().getHours(),
           side: "",
         },
+
       ],
     };
   },
@@ -74,6 +75,7 @@ export default {
         mame: "anas",
         message: this.message,
         time: new Date().setHours(),
+        side:"flex-row-reverse"
         
       });
       }

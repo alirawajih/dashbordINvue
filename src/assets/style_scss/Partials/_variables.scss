@@ -17,6 +17,7 @@ $background_main: #535353;
     --color_text : #ffff;
     --button_hover:linear-gradient(100deg,#4d4b60,#fdfdff );
     --border :#535353e7;
+    --Unread:#36405c
     }
      [data-theme="light"] {
         
@@ -25,6 +26,7 @@ $background_main: #535353;
         --color_text : #000000;
         --button_hover:linear-gradient(100deg,#fdfdff,#7367f0 );
         --border: #fffafac4 ;
+        --Unread: #ffffff
 
 
       }
