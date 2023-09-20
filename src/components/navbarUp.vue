@@ -6,9 +6,7 @@
           <vue-feather class="menu" type="menu" @click="menuopen"></vue-feather>
         </li>
 
-        <li>
-          <vue-feather type="calendar"></vue-feather>
-        </li>
+       
         <li>
           <router-link to="email">
             <vue-feather type="mail"> </vue-feather>
@@ -29,11 +27,7 @@
             @click="!light ? darkLayout('light') : darkLayout('dark')"
           ></vue-feather>
         </li>
-        <li>
-          <a href="#">
-            <vue-feather type="shopping-cart"></vue-feather>
-          </a>
-        </li>
+       
         <li class="username">
           <div class="d-inline-block">
             <p class="m-0 fs-5">ali</p>

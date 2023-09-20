@@ -6,6 +6,9 @@
     background: var(--background_def);
     color: var(--color_text)
   }
+  .right{
+    flex-direction: row-reverse;
+  }
   .messages {
 @include border;
     background: gray;

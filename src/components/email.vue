@@ -72,6 +72,7 @@
 
             <label class="form-check-label text-secondary" for="exampleCheck1"
               >Select All
+              <span>({{ selected.length }})</span>
             </label>
           </div>
           <div class="form-check fs-6 ms-3" v-if="selected.length">
@@ -161,7 +162,7 @@ export default {
       this.emailData = data;
       this.emails.map((i) => {
         if (i.id == data.id) {
-          return (i.isRead =  false);
+          return (i.isRead = true);
         }
       });
     },
@@ -189,8 +190,6 @@ export default {
       this.emails = newArr;
     },
     // select(id = null) {
-    //   console.log(this.selected)
-    //   // console.log(this.selected)
     //   // if (id) {
     //   //   if (!this.selected.includes(id)) {
     //   //     this.selected.push(id);

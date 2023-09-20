@@ -1,5 +1,6 @@
 <template>
   <div class="chat p-3">
+   
     <div class="messages">
       <div
         class="d-flex"
@@ -23,6 +24,7 @@
             aria-label="Recipient's username"
             aria-describedby="basic-addon2"
           />
+
           <button class="btn btn-primary">
             <vue-feather type="chevron-right"></vue-feather>
           </button>
@@ -30,63 +32,54 @@
       </div>
     </div>
 
-    <div> 
-
-    </div>
   </div>
-  
 </template>
 <script>
 export default {
   data() {
     return {
       message: "",
-      show:false,
+      show: false,
       messages: [
         {
           name: "ali",
           message: "xd alaklsjaks nal knalsknaklsaml knajlnsamkl kamnki",
           time: new Date().getHours(),
-          side: "",
+          side: "left",
         },
         {
           name: "ssss",
           message: "xd sslklalks malksmalksmlakms lkasmlkams laks maslkm alkss",
           time: new Date().getHours(),
-          side: "flex-row-reverse",
+          side: "right",
         },
         {
           name: "ssss",
           message: "xd ssss",
           time: new Date().getHours(),
-          side: "",
+          side: "left",
         },
-
       ],
+      messegesSide: "left",
     };
   },
 
-  
   methods: {
-
     sendmessage() {
-      if (this.message != ''){
+      if (this.message != "") {
         this.messages.push({
-        mame: "anas",
-        message: this.message,
-        time: new Date().setHours(),
-        side:"flex-row-reverse"
-        
-      });
+          mame: "anas",
+          message: this.message,
+          time: new Date().setHours(),
+          side: this.messegesSide,
+        });
       }
       this.message = "";
     },
   },
-  computed:{
-
-  }
+  computed: {},
 };
 </script>
 <style lang="scss" scoped>
-@import '../assets/style_scss/components/chat.scss'
+@import "../assets/style_scss/components/chat.scss";
 </style>
