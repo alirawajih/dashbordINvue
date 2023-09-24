@@ -103,17 +103,7 @@ export default {
             enabled: false,
           },
         },
-        // yaxis: {
-        //   min: 1,
-        //   logarithmic: true,
-        //   tickAmount: 4,
-        //   forceNiceScale: true,
-        //   labels: {
-        //     formatter: (value) => {
-        //       return value;
-        //     },
-        //   },
-        // },
+  
         tooltip: {
           theme: "dark",
           x: {

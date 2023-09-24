@@ -49,25 +49,7 @@ export default {
           
         },
 
-        // grid: {
-        //   show: false,
-        // },
-        // xaxis: {
-        //   labels: {
-        //     show: false,
-        //   },
-        //   axisBorder: {
-        //     show: false,
-        //   },
-        //   axisTicks: {
-        //     show: false,
-        //   },
-        // },
-        // yaxis: {
-        //   labels: {
-        //     show: false,
-        //   },
-        // },
+      
       },
     };
   },

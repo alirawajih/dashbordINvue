@@ -104,3 +104,20 @@ li:hover {
     
     }
   }
+  #style-4::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px gray;
+  display: none;
+}
+
+#style-4::-webkit-scrollbar
+{
+	width: 7px;
+	// background-color: #e0d2d2;
+}
+
+#style-4::-webkit-scrollbar-thumb
+{
+	background-color: #0000007e;
+  border-radius:5px ;
+}

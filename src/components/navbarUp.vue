@@ -6,7 +6,6 @@
           <vue-feather class="menu" type="menu" @click="menuopen"></vue-feather>
         </li>
 
-       
         <li>
           <router-link to="email">
             <vue-feather type="mail"> </vue-feather>
@@ -19,7 +18,7 @@
         </li>
       </ul>
     </div>
-    <div   >
+    <div>
       <ul class="mt- rightlist">
         <li class="themeIcon">
           <vue-feather
@@ -27,10 +26,81 @@
             @click="!light ? darkLayout('light') : darkLayout('dark')"
           ></vue-feather>
         </li>
-       
+        <li>
+          <div class="usermenu" style="background: gray; border-radius: 5px">
+            <label
+              for="toggler "
+              style="cursor: pointer"
+              data-bs-toggle="dropdown"
+              data-bs-auto-close="outside"
+              aria-expanded="false"
+            >
+              <button type="button" class="btn btn-primary position-relative">
+                Inbox
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                  style="color: rgb(37, 179, 52)"
+                >
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+            </label>
+
+            <div
+              class="dropdown dropdown-menu float-start p-0 m-0"
+              id="style-4"
+              :class="dropdown"
+              style="
+                border-radius: 5px;
+                background: rgb(224, 222, 222);
+                width: 300px;
+              "
+            >
+              <div class="p-2"></div>
+              <div class=" ">
+                <div
+                  class="LatestLINKMost"
+                  :class="newview ? 'borderBottom' : ''"
+                >
+                  <button type="button" href="#" @click="newView">
+                    new Viewed
+                  </button>
+                </div>
+                <div
+                  class="LatestLINKMost"
+                  :class="mostview ? 'borderBottom' : ''"
+                >
+                  <button @click="mostView" class="" href="#">
+                    Most Viewed
+                  </button>
+                </div>
+              </div>
+              <div class="p-3" style="max-height: 400px">
+                <div class="newview" v-if="newview">
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                  <p>newView</p>
+                </div>
+                <div class="mostview" v-if="mostview">
+                  <p>mostView</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
         <li class="username">
           <div class="d-inline-block">
-            <p class="m-0 fs-5">ali</p>
+            <p class="m-0 fs-5">{{ $store.state.userIN.Firstname }}</p>
           </div>
         </li>
 
@@ -47,15 +117,15 @@
                   badge
                   badge-variant="success"
                   class="p-0"
-                  src="https://placekitten.com/300/300"
+                  :src="$store.state.userIN.image"
                 ></b-avatar>
               </label>
-              <div class="dropdown dropdown-menu float-start" :class="dropdown">
+              <div class="dropdown dropdown-menu" :class="dropdown">
                 <ul>
                   <li class="mt-2">
                     <router-link :to="{ name: 'user' }">
                       <vue-feather type="user"></vue-feather>
-                      <span>user</span>
+                      <span>{{ $store.state.userIN.Firstname }}</span>
                     </router-link>
                   </li>
                   <li>
@@ -118,12 +188,16 @@
 import { ability } from "@/ability/defineApilty";
 import { initialAbility } from "@/ability/config";
 import { Logoutuser } from "@/jsc/loginuser";
+import store from "../store";
 export default {
   name: "navbarUp",
   data() {
     return {
       dropdown: "",
       light: null,
+      user: [],
+      newview: true,
+      mostview: false,
     };
   },
   created() {
@@ -141,8 +215,6 @@ export default {
     logout() {
       Logoutuser();
       ability.update(initialAbility.ability);
-      
-
     },
     themedata() {
       let theme = localStorage.getItem("theme");
@@ -153,10 +225,48 @@ export default {
         this.light = true;
       }
     },
+    mostView() {
+      this.mostview = true;
+      this.newview = false;
+    },
+    newView() {
+      this.mostview = false;
+      this.newview = true;
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/style_scss/components/navbarUp.scss";
+
+.borderBottom {
+  border-bottom: 2px solid rgb(26, 21, 68);
+}
+.LatestLINKMost {
+  display: inline-block;
+  width: 50%;
+  font-size: 13px;
+}
+#style-4::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px gray;
+  display: none;
+}
+
+#style-4::-webkit-scrollbar {
+  width: 7px;
+  // background-color: #e0d2d2;
+}
+
+#style-4::-webkit-scrollbar-thumb {
+  background-color: #0000007e;
+  border-radius: 5px;
+}
+#style-4 {
+  overflow:hidden
+}
+#style-4:hover {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 </style> 

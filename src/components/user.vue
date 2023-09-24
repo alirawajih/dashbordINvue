@@ -5,7 +5,7 @@
         <div class="imguser">
           <img
             class="img-fluid"
-            src="../../src/assets/images/pages/eCommerce/5.png"
+            :src="image || $store.state.userIN.image"
           />
         </div>
       </div>
@@ -36,7 +36,7 @@
                   Last name
                 </strong>
               </td>
-              <td   >{{ user.lastname }}</td>
+              <td>{{ user.lastname }}</td>
             </tr>
             <tr>
               <td>
@@ -45,7 +45,7 @@
                   Email
                 </strong>
               </td>
-              <td   >{{ user.email }}</td>
+              <td>{{ user.email }}</td>
             </tr>
 
             <tr>
@@ -57,7 +57,7 @@
                   Phone number
                 </strong>
               </td>
-              <td   >+9620......</td>
+              <td>+9620......</td>
             </tr>
 
             <tr>
@@ -69,7 +69,7 @@
                   Position
                 </strong>
               </td>
-              <td   >{{ user.position }}</td>
+              <td>{{ user.position }}</td>
             </tr>
             <tr>
               <td>
@@ -80,26 +80,42 @@
                   ability
                 </strong>
               </td>
-              <td   >{{ user.ability.length + 1 }}</td>
+              <td>{{ user.ability.length + 1 }}</td>
+            </tr>
+            <tr>
+              <input @change="onImage" type="file" multiple />
             </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-
 </template>
   <script>
-  export default {
+import store from "../store";
+export default {
   data() {
     return {
       user: [],
+      image: null,
     };
   },
-  components: {
-  },
+  components: {},
   created() {
     this.user = JSON.parse(localStorage.getItem("user"));
+  },
+  methods: {
+    onImage(event) {
+      let file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.image = reader.result;
+        store.state.userIN.image = reader.result;
+      };
+
+      reader.readAsDataURL(file);
+     
+    },
   },
 };
 </script>
@@ -108,7 +124,7 @@
   background: white;
 
   border-radius: 5px;
-  margin: 6px;
+  margin: 12px;
 }
 </style>
   

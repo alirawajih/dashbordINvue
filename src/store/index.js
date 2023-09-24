@@ -14,6 +14,7 @@ const store = createStore({
 
     state: {
         theme:localStorage.getItem('theme')?localStorage.getItem('theme'):'dark',
+        userIN: JSON.parse(localStorage.getItem("user")),
         count: 7,
         name: 'ali',
         menuopen: 'close',
@@ -39,6 +40,7 @@ const store = createStore({
                 Firstname:'ali',
                 lastname:'ahmad',
                 position: 'admin',
+                image:"https://placekitten.com/300/300",
                 ability: [
                     {
                       action: 'manage',

@@ -93,7 +93,7 @@ export default {
         },
         fill: {
           opacity: 0.8,
-          //   type: 'pattern',
+        
           pattern: {
             style: ["verticalLines", "horizontalLines"],
             width: 5,
@@ -120,9 +120,7 @@ export default {
            
           type: "datetime",
         },
-        // yaxis:{
-        //     min:0,
-        // }
+       
        
       },
     };

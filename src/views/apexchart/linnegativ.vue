@@ -41,9 +41,7 @@
   
   gradient: {
     type: 'vertical',
-    // shadeIntensity: 1,
-    // opacityFrom: 1,
-    // opacityTo: 1,
+  
     gradientToColors:['#007B55'], 
     stops: [27, 0],
     },
@@ -51,9 +49,7 @@
   },
   
           plotOptions: {
-    //         area: {
-    //     fillTo: 'origin',
-    // }
+   
             
           },
           dataLabels: {
@@ -106,9 +102,7 @@
               "2013-08-01",
               "2013-09-01",
             ],
-            //   labels: {
-            //     rotate: -90
-            //   }
+            
           },
         },
       };

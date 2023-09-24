@@ -52,16 +52,12 @@ export default {
         plotOptions: {
           bar: {
             horizontal: false,
-            // columnWidth: "15%",
 
             distributed: false,
             dataLabels: {
               hideOverflowingLabels: true,
             },
-            // colors: {
-            //   // backgroundBarColors: ["gray"],
-
-            // },
+         
           },
         },
         xaxis: {

@@ -66,17 +66,7 @@ export default {
             show: false,
           },
         },
-        //   markers: {
-        //     size: 20,
-        //     strokeWidth: 0,
-
-        //     shape: "circle",
-
-        //     hover: {
-        //       size: undefined,
-        //       sizeOffset: 15,
-        //     },
-        //   },
+     
         xaxis: {
           tickPlacement: "between",
           labels: {

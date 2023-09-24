@@ -68,6 +68,7 @@
               id="exampleCheck1"
               v-model="checked"
               @click="checked ? (selected = []) : selectall()"
+              :disabled="isvalidated ? false : true"
             />
 
             <label class="form-check-label text-secondary" for="exampleCheck1"
@@ -92,7 +93,7 @@
           </div>
         </div>
       </div>
-      <div class="m-0" style="overflow-y: scroll; height: 83em">
+      <div class="m-0" id="style-4" style="overflow-y: scroll; height: 83em">
         <ul v-for="email in emails" :key="email.id" class="email-slist">
           <li :class="`emails ${email.isRead || 'Unread'}`">
             <div class="d-flex ps-3">
@@ -138,6 +139,7 @@
 <script>
 import { emails } from "../db/emails";
 import showEmail from "./showEmail.vue";
+
 export default {
   components: { showEmail },
   data() {
@@ -224,7 +226,15 @@ export default {
       this.checked = false;
       this.selected = [];
     },
+    
   },
+  computed: {
+    isvalidated(){
+      return !this.emails.length == 0;
+    }  
+    
+  },
+
 };
 </script>
 <style lang="scss" scoped>
