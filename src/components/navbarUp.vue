@@ -19,7 +19,7 @@
       </ul>
     </div>
     <div>
-      <ul class="mt- rightlist">
+      <ul class="rightlist">
         <li class="themeIcon">
           <vue-feather
             :type="light ? 'moon' : 'sun'"
@@ -37,10 +37,14 @@
             >
               <vue-feather type="bell"></vue-feather>
               <span
-                class="position-absolute top-0 translate-middle"
-                style="color: rgb(37, 179, 52)"
-              >
-                99+
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill  p-1"
+              style="    width: auto;
+              background: rgb(43, 39, 39);
+
+              color: rgb(44, 134, 44);
+              "
+                >
+                9+
                 <span class="visually-hidden">unread messages</span>
               </span>
             </label>
@@ -109,7 +113,7 @@
                   :src="$store.state.userIN.image"
                 ></b-avatar>
               </label>
-              <div class="dropdown dropdown-menu" :class="dropdown">
+              <div class="dropdown dropdown-menu m-0 p-0" :class="dropdown">
                 <ul>
                   <li class="mt-2">
                     <router-link :to="{ name: 'user' }">
@@ -228,6 +232,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style_scss/components/navbarUp.scss";
-
-
 </style> 

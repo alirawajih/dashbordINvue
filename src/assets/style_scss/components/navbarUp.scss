@@ -66,10 +66,8 @@
     position: absolute;
     left: -98px;
     top: 48px;
-    flex-direction: column;
     border: 1px solid rgba(239, 243, 246, 0.05);
     background: var(--background_def);
-    gap: 5px;
   }
   .dropdown ul li {
     float: left;

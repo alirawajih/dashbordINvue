@@ -1,6 +1,5 @@
 <template>
   <div class="chat p-3">
-   
     <div class="messages" id="style-4">
       <div
         class="d-flex"
@@ -31,10 +30,10 @@
         </form>
       </div>
     </div>
-
   </div>
 </template>
 <script>
+import './sss'
 export default {
   data() {
     return {
@@ -75,6 +74,10 @@ export default {
         });
       }
       this.message = "";
+    },
+    translat() {
+     
+
     },
   },
   computed: {},

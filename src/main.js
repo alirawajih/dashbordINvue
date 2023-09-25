@@ -15,4 +15,4 @@ createApp(App).use(store).use(BootstrapVue3)
 
 .use(globalMethods)
 .component(VueFeather.name, VueFeather)
-.use(VueApexCharts).use(VueFeather).use(router).mount('#app')
+.use(VueApexCharts).use(router).mount('#app')

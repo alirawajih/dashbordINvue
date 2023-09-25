@@ -98,8 +98,7 @@
 
 <script>
 import logo from "@/views/img/download.png";
-import { useRoute } from "vue-router";
-const route = useRoute();
+
 
 export default {
   name: "navmenu",

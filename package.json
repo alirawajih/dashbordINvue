@@ -10,6 +10,7 @@
     "@casl/ability": "^6.5.0",
     "@casl/vue": "^2.2.1",
     "@dvuckovic/vue3-bootstrap-icons": "^1.0.6",
+    "@google-cloud/translate": "^3.0.0",
     "@headlessui/vue": "^1.7.14",
     "@popperjs/core": "^2.11.6",
     "@vee-validate/rules": "^4.9.5",
