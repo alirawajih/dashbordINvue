@@ -105,3 +105,34 @@
       display: inline-block;
     }
   }
+  .borderBottom {
+    border-bottom: 2px solid rgb(26, 21, 68);
+  }
+  .LatestLINKMost {
+    display: inline-block;
+    width: 50%;
+    font-size: 13px;
+  }
+  #style-4::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px gray;
+    display: none;
+  }
+  
+  #style-4::-webkit-scrollbar {
+    width: 7px;
+    // background-color: #e0d2d2;
+  }
+  
+  #style-4::-webkit-scrollbar-thumb {
+    background-color: #0000007e;
+    border-radius: 5px;
+  }
+  
+  #style-4 {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 5px;
+    background: rgb(224, 222, 222);
+    width: 343px;
+    left: -200px;
+  }

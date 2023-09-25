@@ -27,7 +27,7 @@
           ></vue-feather>
         </li>
         <li>
-          <div class="usermenu" style="background: gray; border-radius: 5px">
+          <div class="usermenu">
             <label
               for="toggler "
               style="cursor: pointer"
@@ -35,28 +35,17 @@
               data-bs-auto-close="outside"
               aria-expanded="false"
             >
-              <button type="button" class="btn btn-primary position-relative">
-                Inbox
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill"
-                  style="color: rgb(37, 179, 52)"
-                >
-                  99+
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </button>
+              <vue-feather type="bell"></vue-feather>
+              <span
+                class="position-absolute top-0 translate-middle"
+                style="color: rgb(37, 179, 52)"
+              >
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span>
             </label>
 
-            <div
-              class="dropdown dropdown-menu float-start p-0 m-0"
-              id="style-4"
-              :class="dropdown"
-              style="
-                border-radius: 5px;
-                background: rgb(224, 222, 222);
-                width: 300px;
-              "
-            >
+            <div class="dropdown dropdown-menu p-0 m-0" id="style-4" style="">
               <div class="p-2"></div>
               <div class=" ">
                 <div
@@ -240,33 +229,5 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/style_scss/components/navbarUp.scss";
 
-.borderBottom {
-  border-bottom: 2px solid rgb(26, 21, 68);
-}
-.LatestLINKMost {
-  display: inline-block;
-  width: 50%;
-  font-size: 13px;
-}
-#style-4::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px gray;
-  display: none;
-}
 
-#style-4::-webkit-scrollbar {
-  width: 7px;
-  // background-color: #e0d2d2;
-}
-
-#style-4::-webkit-scrollbar-thumb {
-  background-color: #0000007e;
-  border-radius: 5px;
-}
-#style-4 {
-  overflow:hidden
-}
-#style-4:hover {
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
 </style> 
