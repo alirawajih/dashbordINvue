@@ -38,6 +38,7 @@
   button {
     border: none;
     background-color: transparent;
+    color: var(--color_text);
   }
   
   a {
@@ -130,7 +131,11 @@
     overflow-y: scroll;
     overflow-x: hidden;
     border-radius: 5px;
-    background: rgb(224, 222, 222);
+    background: var(--background_def);
     width: 343px;
-    left: -200px;
+    left: -250px;
+    color: var(--color_text);
+  }
+  .card-notification:hover {
+    background: gray;
   }

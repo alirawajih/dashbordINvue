@@ -90,6 +90,14 @@
               <span :class="text"> GoogleChart</span>
             </li>
           </router-link>
+          <router-link to="inputForm">
+            <li class="link">
+              <vue-feather
+                type="file-text"
+              ></vue-feather>
+              <span :class="text"> inputForm</span>
+            </li>
+          </router-link>
         </ul>
       </div>
     </div>

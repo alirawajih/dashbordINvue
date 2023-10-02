@@ -37,13 +37,14 @@
             >
               <vue-feather type="bell"></vue-feather>
               <span
-                class="position-absolute top-0 start-100 translate-middle badge rounded-pill  p-1"
-              style="    width: auto;
-              background: rgb(43, 39, 39);
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill p-1"
+                style="
+                  width: auto;
+                  background: rgb(43, 39, 39);
 
-              color: rgb(44, 134, 44);
-              "
-                >
+                  color: rgb(44, 134, 44);
+                "
+              >
                 9+
                 <span class="visually-hidden">unread messages</span>
               </span>
@@ -71,18 +72,27 @@
               </div>
               <div class="p-3" style="max-height: 400px">
                 <div class="newview" v-if="newview">
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
-                  <p>newView</p>
+                  
+                  <div class="card-notification"> 
+                    <p class="fw-bold p-0 m-0">please send me your ....</p>
+                    <span class="">data needed to a applay users </span>                    
+                  </div>
+                  <div class="card-notification"> 
+                    <p class="fw-bold p-0 m-0">please send me your ....</p>
+                    <span class="">data needed to a applay users </span>                    
+                  </div><div class="card-notification"> 
+                    <p class="fw-bold p-0 m-0">please send me your ....</p>
+                    <span class="">data needed to a applay users </span>                    
+                  </div><div class="card-notification"> 
+                    <p class="fw-bold p-0 m-0">please send me your ....</p>
+                    <span class="">data needed to a applay users </span>                    
+                  </div><div class="card-notification"> 
+                    <p class="fw-bold p-0 m-0">please send me your ....</p>
+                    <span class="">data needed to a applay users </span>                    
+                  </div><div class="card-notification"> 
+                    <p class="fw-bold p-0 m-0">please send me your ....</p>
+                    <span class="">data needed to a applay users </span>                    
+                  </div>                 
                 </div>
                 <div class="mostview" v-if="mostview">
                   <p>mostView</p>

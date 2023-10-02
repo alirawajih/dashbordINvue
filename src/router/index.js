@@ -16,6 +16,7 @@ import user from "@/components/user.vue"
 import apexchartExampel from "../views/apexchart/allapexchartExampel.vue"
 import GoogleChart from "../views/googlechart/googlechart.vue"
 import homePage from "../components/homePage.vue"
+import inputForm from "../components/inputForm/inputForm.vue"
 const routes = [
     {
         path: '/', redirect: { name: 'ecommerce' }
@@ -108,6 +109,15 @@ const routes = [
                 path: 'user',
                 name: 'user',
                 component: user,
+                meta: {
+                    subject: 'ACL',
+                    action: 'read'
+                }
+            },
+            {
+                path:'inputForm',
+                name:"inputForm",
+                component:inputForm,
                 meta: {
                     subject: 'ACL',
                     action: 'read'

@@ -33,7 +33,6 @@ import navright from "@/components/navright";
 import { watch } from "vue";
 
 export default {
-  name: "template",
   components: {
     navmenu,
     navbarUp,
