@@ -4,8 +4,9 @@
       <div class="col-lg-4">
         <div class="imguser">
           <img
-            class="img-fluid"
-            :src="image || $store.state.userIN.image"
+            class="img-fluid "
+            :src="user ? this.user.image:'../assets/images/profile/user-uploads/timeline.jpg'"
+            
           />
         </div>
       </div>

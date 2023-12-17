@@ -62,6 +62,7 @@ import Transactions from "./Transactions.vue";
 import { data } from "../../db/dataAnalytics";
 
 export default {
+  
   name: "ecommerce",
 
   data() {

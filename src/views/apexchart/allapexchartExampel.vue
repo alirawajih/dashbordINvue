@@ -22,8 +22,8 @@
       
       <div
         class="apexchart row col-sm-12 col-md-12 col-xl-6 p-2 m-0"
-        v-for="data in dataAnalytics"
-        :key="data"
+        v-for="(data,index) in dataAnalytics"
+        :key="index"
       >
         <apexchart :data="data" />
       </div>

@@ -1,7 +1,7 @@
 <template>
-  <div class="congratulation text-start  p-3" >
-    <h3>webhook</h3>
-    <form class="ps-3" @submit.prevent="form">
+  <div class="congratulation text-start p-3">
+    <h3>Webhook</h3>
+    <div>
       <div class="border-bottom pb-5">
         <div class="reseve pt-3 d-grid">
           <div class="form-check form-switch">
@@ -22,7 +22,6 @@
               id="flexCheckDefault"
               class="form-control w-75"
               type="text"
-              style="color: white; background: transparent"
             />
             <label class="form-check-label ps-3 pt-2" for="flexCheckDefault">
               key
@@ -52,26 +51,26 @@
                 id="flexCheckDefault"
                 class="form-control w-75"
                 type="text"
-                style="color: white; background: transparent"
               />
               <label class="form-check-label ps-3 pt-2" for="flexCheckDefault">
                 key
               </label>
             </div>
-           
           </div>
         </div>
       </div>
 
       <!-- <button type="subeit" class="btn btn-primary">Primary</button> -->
-    </form>
+    </div>
   </div>
 </template>
   
   <script>
 import addmoreVue from "./addmore.vue";
+import { watch } from "vue";
 export default {
   name: "EcommerceMedal",
+
   data() {
     return {
       reseve: true,
@@ -79,6 +78,10 @@ export default {
       reseveKey: null,
       sendKey: null,
       emails: [],
+      keys:{
+        reseveKey:null,
+        sendKey:null
+      },
       courseName: "",
     };
   },
@@ -86,10 +89,18 @@ export default {
     addmoreVue,
   },
   methods: {
-    form() {
-      console.log(this.reseveKey, this.sendKey);
-    },
+    
   },
+  watch:{
+    reseveKey(){
+      // console.log(this.reseveKey,'res')
+      this.$emit('reseveKey',this.reseveKey)
+    },
+    sendKey(){
+      this.$emit('sendKey',this.sendKey)
+    }
+
+  }
 };
 </script>
   
@@ -97,8 +108,15 @@ export default {
 @import "../../assets/style_scss/ecommerce/ecommerce.scss";
 @import "../../assets/style_scss/Partials/mixin";
 @import "../../assets/style_scss/Partials/variables";
-.congratulation{
-    color: var(--color_text);
-
+.congratulation {
+  color: var(--color_text);
+}
+.form-control {
+    background: transparent;
+  color: var(--color_text);
+  border: solid 1px var(--color_text);
+}
+.form-control:focus{
+  color: var(--color_text);
 }
 </style>

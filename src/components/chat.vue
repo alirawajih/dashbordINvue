@@ -4,8 +4,8 @@
       <div
         class="d-flex"
         :class="value.side"
-        v-for="value in messages"
-        :key="value"
+        v-for="(value,index) in messages"
+        :key="index"
       >
         <div class="message">
           <p class="m-0 p-2">{{ value.message }}</p>
@@ -33,7 +33,7 @@
   </div>
 </template>
 <script>
-import './sss'
+
 export default {
   data() {
     return {

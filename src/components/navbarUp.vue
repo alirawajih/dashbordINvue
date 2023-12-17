@@ -65,15 +65,15 @@
                   class="LatestLINKMost"
                   :class="mostview ? 'borderBottom' : ''"
                 >
-                  <button @click="mostView" class="" href="#">
+                  <button @click="mostView"  href="#">
                     Most Viewed
                   </button>
                 </div>
               </div>
-              <div class="p-3" style="max-height: 400px">
-                <div class="newview" v-if="newview">
+              <div class=" " style="max-height: 400px">
+                <div class="newview " v-if="newview">
                   
-                  <div class="card-notification"> 
+                  <div class="card-notification  "> 
                     <p class="fw-bold p-0 m-0">please send me your ....</p>
                     <span class="">data needed to a applay users </span>                    
                   </div>
@@ -103,7 +103,7 @@
         </li>
         <li class="username">
           <div class="d-inline-block">
-            <p class="m-0 fs-5">{{ $store.state.userIN.Firstname }}</p>
+            <p class="m-0 fs-5">{{ this.user.Firstname }}</p>
           </div>
         </li>
 
@@ -120,7 +120,7 @@
                   badge
                   badge-variant="success"
                   class="p-0"
-                  :src="$store.state.userIN.image"
+                  :src="this.user.image"
                 ></b-avatar>
               </label>
               <div class="dropdown dropdown-menu m-0 p-0" :class="dropdown">
@@ -128,7 +128,7 @@
                   <li class="mt-2">
                     <router-link :to="{ name: 'user' }">
                       <vue-feather type="user"></vue-feather>
-                      <span>{{ $store.state.userIN.Firstname }}</span>
+                      <span>{{ this.user.Firstname }}</span>
                     </router-link>
                   </li>
                   <li>
@@ -198,13 +198,14 @@ export default {
     return {
       dropdown: "",
       light: null,
-      user: [],
+      user: null,
       newview: true,
       mostview: false,
     };
   },
   created() {
     this.themedata();
+    this.getuser()
   },
   methods: {
     darkLayout(newTheme) {
@@ -236,6 +237,10 @@ export default {
       this.mostview = false;
       this.newview = true;
     },
+    getuser(){
+    this.user = JSON.parse(localStorage.getItem('user'));
+     
+    }
   },
 };
 </script>

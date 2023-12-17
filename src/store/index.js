@@ -35,7 +35,7 @@ const store = createStore({
 
         users: [
             {
-                email: 'ali@yahoo.com',
+                email: 'test@example.com',
                 password: '123',
                 Firstname:'ali',
                 lastname:'ahmad',
@@ -50,8 +50,8 @@ const store = createStore({
                   
             },
             {
-                email: 'ali1@yahoo.com',
-                password: '1234',
+                email: 'test1@example.com',
+                password: '123',
                 Firstname:'ali1',
                 lastname:'ahmad1',
                 position: 'user',

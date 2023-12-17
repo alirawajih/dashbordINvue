@@ -42,7 +42,7 @@
           </template>
         </addmoreVue> -->
 
-        <div class="table_scroll" >
+        <div class="table_scroll">
           <table class="table">
             <thead>
               <tr>
@@ -99,7 +99,6 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
       data-bs-backdrop="static"
-    
     >
       <div class="modal-dialog" style="margin-top: 15%">
         <div class="modal-content">
@@ -107,48 +106,49 @@
             <h1 class="modal-title fs-5" id="exampleModalLabel">New Email</h1>
           </div>
           <div class="modal-body">
-            <form>
+            <form @submit.prevent="addemail">
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label"
                   >Email:</label
                 >
                 <input
                   type="email"
-                  v-model="new_email.email"
+                  v-model.lazy="new_email.email"
                   class="form-control"
+                  required
                 />
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">Url:</label>
                 <input
                   type="text"
-                  v-model="new_email.url"
+                  v-model.lazy="new_email.url"
                   class="form-control"
                   id="recipient-name"
+                  required
                 />
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label">Key</label>
                 <input
                   type="text"
-                  v-model="new_email.key"
+                  v-model.lazy="new_email.key"
                   class="form-control"
                   id="recipient-name"
+                  required
                 />
               </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-primary">add Email</button>
+              </div>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" @click="addemail" class="btn btn-primary"  data-bs-dismiss="modal">
-              add Email
-            </button>
           </div>
         </div>
       </div>
@@ -167,14 +167,14 @@
             <h1 class="modal-title fs-5" id="exampleModalLabel">New Email</h1>
           </div>
           <div class="modal-body">
-            <form>
+            <form @submit.prevent="edit_email(editemail)">
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label"
                   >Email:</label
                 >
                 <input
                   type="email"
-                  v-model="editemail.email"
+                  v-model.lazy="editemail.email"
                   class="form-control"
                 />
               </div>
@@ -182,7 +182,7 @@
                 <label for="message-text" class="col-form-label">Url:</label>
                 <input
                   type="text"
-                  v-model="editemail.url"
+                  v-model.lazy="editemail.url"
                   class="form-control"
                   id="recipient-name"
                 />
@@ -191,29 +191,25 @@
                 <label for="message-text" class="col-form-label">Key</label>
                 <input
                   type="text"
-                  v-model="editemail.key"
+                  v-model.lazy="editemail.key"
                   class="form-control"
                   id="recipient-name"
                 />
               </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
 
-            <button
-              type="button"
-              @click="edit_email(editemail)"
-              class="btn btn-primary"
-            >
-              edit Email
-            </button>
+                <button type="submit" class="btn btn-primary">
+                  edit Email
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -225,6 +221,10 @@
 import addmoreVue from "./addmore.vue";
 export default {
   name: "EcommerceMedal",
+  emits: {
+    newEmail: null,
+    editEmail: null,
+  },
   data() {
     return {
       reseve: true,
@@ -232,7 +232,6 @@ export default {
       reseveKey: null,
       sendKey: null,
       emails: [],
-      courseName: "",
       emails_id: [
         {
           id: 1,
@@ -253,10 +252,10 @@ export default {
           url: "https://www.asas.com",
         },
       ],
-      new_email: [],
+      new_email: {},
       editemail: [],
-      addemailstate:true,
-      editemailstate:true
+      addemailstate: true,
+      editemailstate: true,
     };
   },
   components: {
@@ -276,8 +275,9 @@ export default {
         key: this.new_email.key,
         url: this.new_email.url,
       });
+      this.$emit("newEmail", this.new_email);
       this.new_email = [];
-      this.addemailstate = false
+      this.addemailstate = false;
     },
     show_email(id) {
       this.emails_id.filter((i) => {
@@ -286,10 +286,11 @@ export default {
         }
       });
     },
-    edit_email(id) {
+    edit_email(data) {
       this.emails_id.map((i) => {
-        if (i.id == id.id) {
+        if (i.id == data.id) {
           alert("success");
+          this.$emit("editEmail", data);
         }
       });
     },
@@ -333,27 +334,24 @@ h3 {
 p {
   color: var(--color_text);
 }
-.table_scroll{
-    overflow-y: scroll;
-    height: 15em;
+.table_scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  height: 15em;
 }
-.table_scroll::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px gray;
+.table_scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px gray;
   display: none;
 }
 
-.table_scroll::-webkit-scrollbar
-{
-	width: 7px;
-	/*  background-color: #e0d2d2; */
+.table_scroll::-webkit-scrollbar {
+  width: 7px;
+  /*  background-color: #e0d2d2; */
 }
 
-.table_scroll::-webkit-scrollbar-thumb
-{
-  
-	background-color: #0000007e;
-  border-radius:5px ;
+.table_scroll::-webkit-scrollbar-thumb {
+  background-color: #0000007e;
+  border-radius: 5px;
 }
-
 </style>

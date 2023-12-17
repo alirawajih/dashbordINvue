@@ -7,7 +7,7 @@
     <h3 class="mb-75 mt-2 pt-50">
       <a href="#">ssss</a>
     </h3>
-    <button type="button" class="text-white p-2">View Sales</button>
+    <button type="button"  class=" btn btn-primary text-white p-2">View Sales</button>
     <img
       :src="require('@/assets/images/illustration/badge.svg')"
       alt="Medal Pic"

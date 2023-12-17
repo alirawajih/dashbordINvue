@@ -1,18 +1,23 @@
 <template>
-  <div class="addmore" >
-    <div class="w-full">
+  <div class="" >
+    <div class=" addmore w-full">
       <div class="" v-for="(course, index) in courses" :key="index">
-        <div class=" ">
-          <slot name="body"> </slot>
+
+        <div class="">
+          
+          <slot name="body">
+            
+          </slot>
 
           <vue-feather class="pt-3" @click="remove(index)" type="trash-2"> </vue-feather>
         </div>
       </div>
-      <div class="addInput m-3">
+      
+    </div>
+    <div class="addInput m-3">
         <vue-feather type="plus-circle" @click="addMore()"> </vue-feather>
         <span>add {{ event }}</span>
       </div>
-    </div>
   </div>
 </template>
   
@@ -59,7 +64,7 @@ a {
   color: #42b983;
 }
 .addmore{
-  overflow-y: scroll; height: 13em
+  overflow-y: scroll;max-height: 13em;
 }
 .addmore::-webkit-scrollbar-track
 {

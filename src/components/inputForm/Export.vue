@@ -11,22 +11,21 @@
       />
       <label class="form-check-label" for="flexSwitchCheckDefault">Email</label>
       <div class="emailcompany" v-if="email">
-        <div>
+        <div >
           <p class="fs-6 mt-2">company</p>
-          <addmoreVue event="key">
-            <template #body>
-              <div class="pt-2">
-                <label  class="form-label">Key</label>
-               <div class=" "> 
-                <input
-                  type="text"
-                  class="form-control w-75"
-                />
-               
-               </div>
+          <label class="form-label">Key</label>
+                <div class=" pt-2" v-for="email in emails" :key="email.id">
+                  <input type="text" v-model="email.key" class="form-control w-75" id="key" />
+                </div>
+          <!-- <addmoreVue event="key" >
+            <template #body >
+              <div class="pt-2  " >
+                <div class=" ">
+                  <input type="text" class="form-control w-75" id="key" />
+                </div>
               </div>
             </template>
-          </addmoreVue>
+          </addmoreVue> -->
         </div>
         <div class="option grid gap-3">
           <div class="pt-2"><h5>option</h5></div>
@@ -35,30 +34,28 @@
               <input
                 type="checkbox"
                 class="form-check-input"
-                id="inlineCheckbox1"
                 value="zero"
+                v-model="Option"
               />
-              <label class="form-check-label" for="inlineCheckbox1">zero</label>
+              <label class="form-check-label">zero</label>
             </div>
             <div class="form-check form-check-inline w-25">
               <input
                 type="checkbox"
                 class="form-check-input"
-                id="inlineCheckbox1"
                 value="six"
+                v-model="Option"
               />
-              <label class="form-check-label" for="inlineCheckbox1">six</label>
+              <label class="form-check-label">six</label>
             </div>
             <div class="form-check form-check-inline w-25">
               <input
                 type="checkbox"
                 class="form-check-input"
-                id="inlineCheckbox1"
                 value="seven"
+                v-model="Option"
               />
-              <label class="form-check-label" for="inlineCheckbox1"
-                >seven</label
-              >
+              <label class="form-check-label">seven</label>
             </div>
           </div>
         </div>
@@ -75,12 +72,23 @@ export default {
   data() {
     return {
       email: true,
+      emails:[{key:'emas'}],
+      Option: [],
     };
   },
   components: {
     addmoreVue,
   },
   methods: {},
+  watch: {
+    Option() {
+      this.$emit("email_Op", this.Option);
+    },
+    emails(){
+        // this.$emit('emails_key', this.emails)
+        console.log('sss')
+    }
+  },
 };
 </script>
     
@@ -90,5 +98,10 @@ export default {
 @import "../../assets/style_scss/Partials/variables";
 .congratulation {
   color: var(--color_text);
+}
+#key {
+  background: transparent;
+  color: var(--color_text);
+  border: solid 1px var(--color_text);
 }
 </style>

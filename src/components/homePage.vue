@@ -1,6 +1,6 @@
 <template>
   <div class="row justify-content-center g-3 m-0">
-    <div class="col-lg-3 col-md-12 d-flex justify-content-center">
+    <div class="col-lg-4 col-md-12 d-flex justify-content-center">
       <router-link :to="{ name: 'login', params: { name: 'DashbordOne' } }">
         <flipCard>
           <template v-slot:front>
@@ -19,7 +19,7 @@
         </flipCard>
       </router-link>
     </div>
-    <div class="col-lg-3 col-md-12 d-flex justify-content-center">
+    <div class="col-xl-3 col-lg-4 col-md-12 d-flex justify-content-center">
       <router-link :to="{ name: 'login', params: { name: 'DashbordTow' } }">
         <flipCard>
           <template v-slot:front>
@@ -38,7 +38,7 @@
         </flipCard>
       </router-link>
     </div>
-    <div class="col-lg-3 col-md-12 d-flex justify-content-center">
+    <div class="col-lg-4 col-md-12 d-flex justify-content-center">
       <flipCard>
         <template v-slot:front>
           <div class="frontCard">
@@ -50,7 +50,6 @@
         </template>
         <template v-slot:back>
           <div class="backCard">
-            <h1>ali</h1>
             <h2>vue 3</h2>
           </div>
         </template>
@@ -70,8 +69,18 @@ export default {
 </script>
 <style scoped>
 .row {
-  padding-top: 13%;
+  /* padding-top: 13%; */
   background: #283046;
-  min-height: 1003px;
+  /* min-height: 1003px; */
+  position: absolute;
+  inset:0 0 0 0;
+  align-content: center;
+  
 }
+@media (max-width: 992px) {
+  .row{
+    position: relative;
+  }
+}
+
 </style>

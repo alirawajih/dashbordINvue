@@ -38,4 +38,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* color: #ffffff; */
 }
+input[type=text]:focus{
+  background: transparent;
+}
 </style>

@@ -1,8 +1,8 @@
  {
     "users": [
         {
-            "email": "ali@yahoo.com",
-            "password": "222",
+            "email": "test@example.com",
+            "password": "123",
             "position": "admin",
             "ability": [
                 {

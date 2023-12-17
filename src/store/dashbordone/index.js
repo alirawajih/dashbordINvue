@@ -7,8 +7,8 @@ export default {
 
         usersone: [
             {
-                email: 'ali@yahoo.com',
-                password: '000',
+                email: 'test@example.com',
+                password: '123',
                 Firstname: 'ahmad',
                 image:"https://placekitten.com/300/300",
                 lastname: 'ahmad',
