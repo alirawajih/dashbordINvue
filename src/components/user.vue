@@ -5,7 +5,7 @@
         <div class="imguser">
           <img
             class="img-fluid "
-            :src="user ? this.user.image:'../assets/images/profile/user-uploads/timeline.jpg'"
+            :src="user.image ? this.user.image:require('@/assets/images/profile/user-uploads/timeline.jpg')"
             
           />
         </div>

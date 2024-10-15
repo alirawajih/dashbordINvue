@@ -1,11 +1,12 @@
 <template>
-    <div class=" maindiv">
+    <div class="  maindiv">
       
-      <div class=" m-0 p-0">
+      <div class=" p-0">
         <div id="chart" class="text-black ">
         <apexchart
           :options="chartOptions"
           :series="series"
+          
         ></apexchart>
       </div>
       </div>
@@ -21,8 +22,8 @@
           39864, 20750, 10874, 439,],
         chartOptions: {
           chart: {
-            width: 150,
             type: "donut",
+             height: 'auto'
             
           },
           plotOptions: {
@@ -37,7 +38,8 @@
                     }
                   }
                 }
-            },
+              }
+            
           },
           dataLabels: {
             enabled: true,
@@ -73,5 +75,9 @@
   background: rgb(154, 155, 157);
   color: black;
   height: 100%;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 </style>

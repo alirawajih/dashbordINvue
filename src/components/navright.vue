@@ -87,6 +87,14 @@
               <span :class="text"> inputForm</span>
             </li>
           </router-link>
+          <router-link to="logs">
+            <li class="link">
+              <vue-feather
+                type="alert-circle"
+              ></vue-feather>
+              <span :class="text"> Logs</span>
+            </li>
+          </router-link>
         </ul>
       </div>
     </div>

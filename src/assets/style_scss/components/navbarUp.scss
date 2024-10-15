@@ -109,6 +109,8 @@
   }
   .LatestLINKMost {
     display: inline-block;
+    text-align: center;
+    padding: 5px;
     width: 50%;
     font-size: 13px;
   }
@@ -137,9 +139,14 @@
     color: var(--color_text);
   }
   .card-notification:hover {
-    background: gray;
+    color: gray;
+    border-bottom:2px solid gray ;
+    span{
+      color: gray;
+
+    }
   }
   .card-notification{
-    padding-left: 5px;
-    padding-top:5px ;
+    margin: 15px;
+    border-bottom:2px solid white ;
   }
