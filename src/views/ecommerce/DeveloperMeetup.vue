@@ -43,18 +43,30 @@
           <h6>Central Park</h6>
           <span class="textgray">Manhattan, New york Cit</span>
         </div>
-      </div> <div class="d-flex">
-        <div class="p-2 feathercategory d-flex textsize">
-          <span>
-            <vue-feather type="info"></vue-feather>
-          </span>
-        </div>
-        <div class="p-2">
-          <h6>Central Park</h6>
-          <span class="textgray">Manhattan, New york Cit</span>
+      </div>
+      <div>
+        <div class="d-flex">
+          <b-avatar-group size="2rem" rounded="lg">
+            <b-avatar
+              ><img
+                class="rounded img-fluid"
+                src="@/views/img/email.de935b8f.svg"
+            /></b-avatar>
+            <b-avatar
+              ><img class="rounded img-fluid" src="@/views/img/badge.svg"
+            /></b-avatar>
+            <b-avatar
+              ><img class="rounded img-fluid" src="@/views/img/download.png"
+            /></b-avatar>
+            <b-avatar
+              ><img
+                class="rounded img-fluid"
+                src="@/views/img/email.de935b8f.svg"
+            /></b-avatar>
+          </b-avatar-group>
+          <span class="p-1">+25</span>
         </div>
       </div>
-      
     </div>
   </div>
 </template>

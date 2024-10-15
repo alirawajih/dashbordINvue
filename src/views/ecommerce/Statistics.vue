@@ -80,7 +80,18 @@
 </template>
 
 <script>
-
+import {
+  BCard,
+  BCardHeader,
+  BCardTitle,
+  BCardText,
+  BCardBody,
+  BRow,
+  BCol,
+  BMediaAside,
+  BAvatar,
+  BMediaBody,
+} from "bootstrap-vue";
 export default {
   name: "Statistics",
 

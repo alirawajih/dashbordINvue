@@ -1,6 +1,6 @@
 <template>
     <div class="maindiv">
-        <div id="chart ">
+        <div id="chart">
         <apexchart type="donut" :options="chartOptions" :series="series"></apexchart>
       </div>
     </div>
@@ -59,10 +59,7 @@
     border-radius: 5px;
     background: rgb(154, 155, 157);
     color: black;
-    height: 98%;
-    display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 100%;
   }
   </style>
     

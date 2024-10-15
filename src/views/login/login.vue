@@ -1,11 +1,15 @@
 <template>
   <div class="homebutton">
-    <router-link :to="{ name: 'homePage' }">
-      <vue-feather type="home"></vue-feather>
-    </router-link>
-  </div>
-  <div class="loginpage row m-0" v-if="dash">
+        <router-link :to="{ name: 'homePage' }">
+          <vue-feather type="home"></vue-feather>
+        </router-link>
+        
+        
+      </div>
+  <div class="loginpage row m-0 " v-if="dash">
+    
     <div class="col-xl-9 col-md-12 col-sm-12 d-flex justify-content-center p-5">
+      
       <img
         src="../../../src/assets/images/pages/not-authorized-dark.svg"
         class="img-fluid"
@@ -21,7 +25,7 @@
 
           <h1 class="h5 mb-3 fw-normal text-dark">log in to {{ name }}</h1>
           <label for="email">Email address</label>
-          <div>
+          <div   >
             <input
               v-model="email"
               name="email"
@@ -32,7 +36,7 @@
             <span class="p-error text-danger"> {{ erroremail }}</span>
           </div>
           <label for="Password">Password</label>
-          <div>
+          <div   >
             <input
               v-model="password"
               name="password"
@@ -56,8 +60,8 @@
       </main>
     </div>
   </div>
-  <div class="pt-5" v-else>
-    <notfound />
+  <div class="pt-5"  v-else>
+    <notfound/>
   </div>
 </template>
 <script>
@@ -75,8 +79,7 @@ export default {
   components: {
     Field,
     Form,
-    ErrorMessage,
-    notfound,
+    ErrorMessage,notfound
   },
   data() {
     let dash = true;
@@ -116,12 +119,12 @@ export default {
       erroremail,
       handleSubmit,
       onSubmit,
-      dash,
+      dash
     };
   },
   created() {
-    if (!store.state.dashbordname.filter((i) => i == this.name).length) {
-      this.dash = false;
+    if(!store.state.dashbordname.filter(i => i== this.name).length){
+      this.dash = false
     }
   },
   methods: {
@@ -173,23 +176,31 @@ export default {
 </script>
 <style scoped>
 .login {
-  /* top: 0;
-  bottom: 0;
-  right: 10px; */
-  margin: auto;
-  border-radius: 20px;
-  background: #e4e1e1bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c2bebe;
 }
-
-
+.LoginForm {
+  margin-left: 7%;
+  margin-top: 15%;
+  width: 100%;
+}
+@media screen and (max-width: 1560px) {
+  .LoginForm {
+    width: 700px;
+    margin-top: 10%;
+  }
+}
 .loginpage {
   /* background: rgba(128, 128, 128, 0.484); */
   min-height: 100vh;
+  
 }
 a {
   color: black;
 }
-.homebutton {
+.homebutton{
   position: absolute;
   display: inline-block;
   padding: 30px;

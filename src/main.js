@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import { ToastPlugin, ModalPlugin } from 'bootstrap-vue-next'
-
 import App from './App.vue'
 import router from './router'
 import store from "@/store";
@@ -12,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
 import VueApexCharts from "vue3-apexcharts";
 // import { Can, abilitiesPlugin } from '@casl/vue';
-createApp(App).use(store)
+createApp(App).use(store).use(BootstrapVue3)
 
 .use(globalMethods)
 .component(VueFeather.name, VueFeather)
