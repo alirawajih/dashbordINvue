@@ -13,21 +13,24 @@
       <div class="chartjs row col-sm-12 col-md-12 col-xl-6 p-2 m-0">
         <chartjs />
       </div>
-      <div class="chartjs row col-sm-12 col-md-12 col-xl-6 p-2 m-0">
+      <div class="row col-sm-6 col-md-6 col-xl-3 p-2 m-0">
         <donut />
       </div>
-      <div class="chartjs row col-sm-12 col-md-12 col-xl-6 p-2 m-0">
-        <halfdonut-vue />
+      <div class="col-sm-6 col-md-6 col-xl-3 p-2 m-0">
+        <div class="row cc gap-2 m-0" style="height: 50%">
+          <halfdonut-vue />
+          <halfdonut-vue />
+        </div>
       </div>
-      
+
       <div
         class="apexchart row col-sm-12 col-md-12 col-xl-6 p-2 m-0"
-        v-for="(data,index) in dataAnalytics"
+        v-for="(data, index) in dataAnalytics"
         :key="index"
       >
         <apexchart :data="data" />
       </div>
-     
+
       <div class="testApexchart row col-sm-12 col-md-12 col-xl-6 p-2 m-0">
         <testApexchart />
       </div>
@@ -55,8 +58,8 @@ import apexchart1Vue from "./apexchart1.vue";
 import chartjs from "./chartjs.vue";
 import testApexchart from "./testApexchart.vue";
 import scatter from "./scatter.vue";
-import donut from "./donut.vue"
-import halfdonutVue from './halfdonut .vue';
+import donut from "./donut.vue";
+import halfdonutVue from "./halfdonut .vue";
 import LineANDbar from "./LineANDbar.vue";
 import candlestick from "./candlestick.vue";
 import negativeValues from "./negativchart.vue";
@@ -81,7 +84,7 @@ export default {
     LineANDbar,
     candlestick,
     negativeValues,
-    linnegativ
+    linnegativ,
   },
   created() {
     this.dataAnalytics = data.data;

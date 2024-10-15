@@ -40,6 +40,8 @@
   }
   
   li {
+    margin-left: 5px;
+    margin-bottom: 5px;
     width: 100%;
     padding: 3px;
     display: flex;
@@ -48,6 +50,8 @@
     cursor: pointer;
   }
   .link{
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
     color: var(--color_text);
   }
   .link:hover {

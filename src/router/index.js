@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import ecommerce from "@/views/ecommerce/ecommerce";
 import analytics from "@/views/analytics/analytics"
+import logs from "@/views/logs/show_logs";
 import login from "@/views/login/login"
 import notfound from "@/components/notfound/notfound.vue"
 import templetform from "@/views/templetform.vue"
@@ -118,6 +119,14 @@ const routes = [
                 path:'inputForm',
                 name:"inputForm",
                 component:inputForm,
+                meta: {
+                    subject: 'ACL',
+                    action: 'read'
+                }
+            },{
+                path:'logs',
+                name:"logs",
+                component:logs,
                 meta: {
                     subject: 'ACL',
                     action: 'read'

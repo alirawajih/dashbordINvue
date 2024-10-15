@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navmenuup navbar-expand-lg">
+  <nav class="navbar navmenuup navbar-expand-lg px-2">
     <div class="mt-2">
       <ul>
         <li>
@@ -19,14 +19,14 @@
       </ul>
     </div>
     <div>
-      <ul class="rightlist">
-        <li class="themeIcon">
+      <ul class="rightlist ">
+        <li class="themeIcon gap">
           <vue-feather
             :type="light ? 'moon' : 'sun'"
             @click="!light ? darkLayout('light') : darkLayout('dark')"
           ></vue-feather>
         </li>
-        <li>
+        <li class="gap">
           <div class="usermenu">
             <label
               for="toggler "
@@ -51,13 +51,12 @@
             </label>
 
             <div class="dropdown dropdown-menu p-0 m-0" id="style-4" style="">
-              <div class="p-2"></div>
               <div class=" ">
                 <div
-                  class="LatestLINKMost"
+                  class="LatestLINKMost "
                   :class="newview ? 'borderBottom' : ''"
                 >
-                  <button type="button" href="#" @click="newView">
+                  <button type="button " class="h5" href="#" @click="newView ">
                     new Viewed
                   </button>
                 </div>
@@ -65,7 +64,7 @@
                   class="LatestLINKMost"
                   :class="mostview ? 'borderBottom' : ''"
                 >
-                  <button @click="mostView"  href="#">
+                  <button @click="mostView" class="h5" href="#">
                     Most Viewed
                   </button>
                 </div>
@@ -101,8 +100,8 @@
             </div>
           </div>
         </li>
-        <li class="username">
-          <div class="d-inline-block">
+        <li class="username gap">
+          <div class="d-inline-block"  >
             <p class="m-0 fs-5">{{ this.user.Firstname }}</p>
           </div>
         </li>
@@ -116,14 +115,10 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <b-avatar
-                  badge
-                  badge-variant="success"
-                  class="p-0"
-                  :src="this.user.image"
-                ></b-avatar>
+
+              <img :src="require('@/assets/images/avatars/2-small.png')" class="avatar">
               </label>
-              <div class="dropdown dropdown-menu m-0 p-0" :class="dropdown">
+              <div class="dropdown  dropdown-menu m-0 p-0" :class="dropdown">
                 <ul>
                   <li class="mt-2">
                     <router-link :to="{ name: 'user' }">
@@ -247,4 +242,13 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style_scss/components/navbarUp.scss";
+.gap{
+  margin-right: 5px;
+}
+.avatar {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+ }
 </style> 
