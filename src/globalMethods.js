@@ -1,5 +1,6 @@
 // import consollog from "./jsc/jsexm"
-import apility from '@/ability/defineApilty'
+
+// import apility from '@/ability/defineApilty'
 import store from './store';
 
 // const options = { path: '/' }; //Options object to pass into SocketIO

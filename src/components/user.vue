@@ -83,9 +83,9 @@
               </td>
               <td>{{ user.ability.length + 1 }}</td>
             </tr>
-            <tr>
+            <!-- <tr>
               <input @change="onImage" type="file" multiple />
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>

@@ -4,18 +4,31 @@
       <div class="logotop">
         <ul>
           <li>
-            
-              <vue-feather
-                class="float-start p-2"
-                type="codesandbox"
-              ></vue-feather>
-              <span :class="text" class="d-inline-block float-start pt-1"
-                >vuexy</span
-              >
-           
+            <vue-feather
+              class="float-start p-2"
+              type="codesandbox"
+            ></vue-feather>
+            <span :class="text" class="d-inline-block float-start pt-1"
+              >vuexy</span
+            >
 
             <div class="fs-3">
-              <button class="clossbutton" @click="clossbutton">&times;</button>
+              <button class="clossbutton" @click="clossbutton">
+                <svg
+                  id="i-close"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                  width="15"
+                  height="15"
+                  fill="none"
+                  stroke="currentcolor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <path d="M2 30 L30 2 M30 30 L2 2" />
+                </svg>
+              </button>
             </div>
           </li>
         </ul>
@@ -23,11 +36,11 @@
 
       <div class="menuitems">
         <ul class="ps-1">
-          <li class="link" >
+          <li class="link">
             <ul class="Grouplist">
-              <li @click="changtype" >
+              <li @click="changtype">
                 <vue-feather type="home"></vue-feather>
-                <div   >
+                <div>
                   <span :class="text">dashboard</span>
                 </div>
                 <div class="chevron">
@@ -54,7 +67,6 @@
           </li>
           <li class="comint">
             <span :class="text">Apps &amp; Pages</span>
-            
           </li>
 
           <router-link to="email">
@@ -65,33 +77,25 @@
           </router-link>
           <router-link to="apexchart">
             <li class="link">
-              <vue-feather
-                type="bar-chart-2"
-              ></vue-feather>
+              <vue-feather type="bar-chart-2"></vue-feather>
               <span :class="text"> Epexchart</span>
             </li>
           </router-link>
           <router-link to="GoogleChart">
             <li class="link">
-              <vue-feather
-                type="bar-chart-2"
-              ></vue-feather>
+              <vue-feather type="bar-chart-2"></vue-feather>
               <span :class="text"> GoogleChart</span>
             </li>
           </router-link>
           <router-link to="inputForm">
             <li class="link">
-              <vue-feather
-                type="file-text"
-              ></vue-feather>
+              <vue-feather type="file-text"></vue-feather>
               <span :class="text"> inputForm</span>
             </li>
           </router-link>
           <router-link to="logs">
             <li class="link">
-              <vue-feather
-                type="alert-circle"
-              ></vue-feather>
+              <vue-feather type="alert-circle"></vue-feather>
               <span :class="text"> Logs</span>
             </li>
           </router-link>
@@ -99,7 +103,6 @@
       </div>
     </div>
   </div>
-  <div class="col-10 backgroundmenuo" @click="clossbutton"></div>
 </template>
 
 <script>
@@ -130,12 +133,11 @@ export default {
         this.type = "chevron-down";
       }
     },
-   
   },
 };
 </script>
 
 <style lang="scss" scoped>
- @import "../assets/style_scss/components/navright.scss"
+@import "../assets/style_scss/components/navright.scss";
 </style>
 
